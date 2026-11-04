@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+.form-input
+ {
+  width: 100%;
+  background: #070d18;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #f1f5f9;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input.search-input {
+  padding-left: 2.75rem !important;
+}
+
+.form-input:focus {
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.form-input::placeholder {
+  color: #64748b;
+}
+
+
+
+/* ================= PRINT REPORT STYLING ================= */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  aside,
+  nav,
+  header,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  * {
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  .report-header h1 {
+  font-size: 48pt !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 10px !important;
+}
+}
